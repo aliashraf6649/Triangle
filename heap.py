@@ -18,7 +18,7 @@ def build_max_heap(arr):
 def heap_sort(arr):
     build_max_heap(arr)
     n = len(arr)
-    for i in range(n - 1, 0 , -1):
+    for i in range(n - 1, -1 , -1):
         arr[i], arr[0] = arr[0], arr[i]
         max_heap(arr,i, 0)
         
