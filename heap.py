@@ -12,7 +12,7 @@ def max_heap(arr,n,i):
 
 def build_max_heap(arr):
     n = len(arr)
-    for i in range(n//2, -1, -1):
+    for i in range(int(n/2) - 1, -1, -1):
         max_heap(arr, n, i)
 
 def heap_sort(arr):
