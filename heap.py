@@ -1,3 +1,8 @@
+def my_len(arr):
+    count = 0
+    for _ in arr:
+        count += 1
+    return count
 def max_heap(arr,n,i):
     largest = i
     left = 2 * i + 1
@@ -11,13 +16,13 @@ def max_heap(arr,n,i):
         max_heap(arr,n,largest)
 
 def build_max_heap(arr):
-    n = len(arr)
+    n = my_len(arr)
     for i in range(int(n/2) - 1, -1, -1):
         max_heap(arr, n, i)
 
 def heap_sort(arr):
     build_max_heap(arr)
-    n = len(arr)
+    n = my_len(arr)
     for i in range(n - 1, -1 , -1):
         arr[i], arr[0] = arr[0], arr[i]
         max_heap(arr,i, 0)
@@ -25,7 +30,7 @@ def heap_sort(arr):
 def is_triangular(nums):
     heap_sort(nums)
 
-    for i in range(len(nums) - 2):
+    for i in range(my_len(nums) - 2):
         if nums[i] + nums[i + 1] > nums[i + 2] and nums[i + 1] + nums[i+2] > nums[i] and nums[i] + nums[i+2] > nums [i+1]:
             return 1
 
