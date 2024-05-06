@@ -31,7 +31,7 @@ def is_triangular(nums):
     heap_sort(nums)
 
     for i in range(my_len(nums) - 2):
-        if nums[i] + nums[i + 1] > nums[i + 2] and nums[i + 1] + nums[i+2] > nums[i] and nums[i] + nums[i+2] > nums [i+1]:
+        if nums[i] + nums[i + 1] > nums[i + 2]:
             return 1
 
     return 0
