@@ -26,6 +26,7 @@ def heap_sort(arr):
     for i in range(n - 1, -1 , -1):
         arr[i], arr[0] = arr[0], arr[i]
         max_heap(arr,i, 0)
+    return arr
         
 def is_triangular(nums):
     heap_sort(nums)
